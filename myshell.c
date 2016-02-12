@@ -100,7 +100,6 @@ int main() {
   return 0;
 }
 
-
 void change_directory() {
   char *home;
   home = getenv("HOME");
@@ -138,7 +137,6 @@ void change_directory() {
   }
 }
 
-
 void run_time() {
   struct tms start_time;
   struct tms end_time;
@@ -167,7 +165,6 @@ void run_time() {
   printf("\nuser\t%.3lfs", (end_time.tms_cutime - start_time.tms_cutime) / (double)clktck);
   printf("\nsys\t%.3lfs\n", (end_time.tms_cstime - start_time.tms_cstime) / (double)clktck);
 }
-
 
 void redirect_output(char flag) {
   pid_t pid;
@@ -224,7 +221,6 @@ void redirect_output(char flag) {
     } 
   }
 }
-
 
 void run_program() {
   pid_t pid;
