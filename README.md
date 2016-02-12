@@ -1,6 +1,8 @@
 # A Shell in C
 
-This shell supports the following commands:
+This is an implementation of a Unix shell. The shell reads user commands using fgets() and then either executes the command itself or calls the apporpriate program using freopen(). All return values should be correctly handled. 
+
+The C-shell supports the following commands:
 
 1. The internal shell command "exit" which terminates the shell.  
    **Concepts**: shell commands, exiting the shell  
@@ -18,7 +20,7 @@ This shell supports the following commands:
  
 4. The internal shell command “time” that reports the user and system time of the program that is specified.  
    **Example**:  time ls -l  
-   **Details**: If the first token is “time”, execute the program that follows, waiting for it to complete. When it finishes, report the user and system time spent executing the program.  
+   **Details**: If the first token is “time”, executes the program that follows, waiting for it to complete. When it finishes, reports the user and system time spent executing the program.  
    **Concepts**: user and system time  
    **System calls**: times()  
  
