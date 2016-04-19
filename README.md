@@ -1,6 +1,6 @@
 # A Shell in C
 
-This is an implementation of a Unix shell. The shell reads user commands using `fgets()` and then either executes the command itself or forks and calls the apporpriate program using `freopen()`. Return values are handled. 
+This is an implementation of a Unix shell. The shell reads input using `fgets()` and then either executes the command itself or forks and calls the apporpriate program using `freopen()`. Return values are handled. 
 
 The C-shell supports the following commands:
 
