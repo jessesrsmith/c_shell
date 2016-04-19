@@ -1,8 +1,3 @@
-/*
-* Jesse Smith 
-* A basic shell in C
-*/
-
 //Preprocessor Directives
 #include <stdlib.h>
 #include <stdio.h>
@@ -59,7 +54,7 @@ int main() {
     //Tokenize command
     token = strtok(command, " \t\n()<>|&;");
 
-    //If no input, continue to loop.
+    //If no input, continue loop.
     if(!token){
       continue;
     }
@@ -182,7 +177,7 @@ void redirect_output(char flag) {
     perror("Error");
     exit(EXIT_FAILURE);
   }
-  //This is the child process
+  //Child process
   else if(pid == 0) {
     args[arg_num] = token;
 
@@ -208,7 +203,7 @@ void redirect_output(char flag) {
     fclose(fp); 
     _exit(EXIT_SUCCESS); 
   } 
-  //This is the parent process
+  //Parent process
   else {
     if (wait(&status) == -1) {
       perror("Error");
@@ -237,7 +232,7 @@ void run_program() {
     perror("Error");
     exit(EXIT_FAILURE);
   }
-  //This is the child process
+  //Child process
   else if(pid == 0) {
     args[arg_num] = token;
 
@@ -254,7 +249,7 @@ void run_program() {
     
     _exit(EXIT_SUCCESS); 
   } 
-  //This is the parent process
+  //Parent process
   else {
     if (wait(&status) == -1) {
       perror("Error");
